@@ -22,7 +22,7 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@Html.DisplayFor(modelItem => item.SONumber)</td>
+            <td>@Html.ActionLink(item.SONumber.ToString(), "Index", "SummaryTransaction", new { SOnumberPass = item.SONumber }, null)</td>
             <td>@Html.DisplayFor(modelItem => item.QuantityDelivered)</td>
             <td>@Html.DisplayFor(modelItem => item.DeliveryTo)</td>
             <td>@Html.DisplayFor(modelItem => item.PricePerSack)</td>
