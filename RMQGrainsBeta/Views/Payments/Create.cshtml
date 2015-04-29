@@ -1,0 +1,226 @@
+﻿@model RMQGrainsBeta.Models.PaymentViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<div class="form-group">
+    <label class="control-label col-md-2">Quantity to Deliver</label>
+    <p>@ViewBag.QuantityToDeliver</p>
+    <input type="hidden" value="@ViewBag.QuantityToDeliver" id="QTD" class="form-control"/>
+    <input type="hidden" value="@ViewBag.TransactionID" name="TransactionID"/>
+</div>
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="DeliveryID" value="@ViewBag.DeliveryID"/>
+    <div class="form-horizontal">
+        <h4>Payment</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Price Per Sack</label>
+            <div class="form-group col col-md-10">
+                <input type="text" id="PerSack" value="0" class="form-control text-box" name="PricePHP" />
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.BankName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BankName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BankName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Branch, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Branch, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Branch, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TermsOfPayment, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.TermsOfPayment, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TermsOfPayment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateofCheque, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateofCheque, new { htmlAttributes = new { @class = "form-control datepicker", @Value =@DateTime.Now} })
+                @Html.ValidationMessageFor(model => model.DateofCheque, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+       
+
+        
+
+        <div id="Inserter">
+            <h2>Expenses</h2>
+        </div>
+        <div id="Inserter2">
+            <h2>General Expenses</h2>
+        </div>
+
+        <input type="button" id="addrow" value="Add" class="btn btn-primary" />
+        <input type="button" id="addrow2" value="Add General" class="btn btn-primary" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@*//Add Divs Template*@
+
+
+    <div class="form-group" id="NewBatchProduct" style="display:none">
+
+        <label class="control-label col-md-2">Details</label>
+        <input type="text" name="Expenses[#].Description" class="form-control" />
+
+        <label class="control-label col-md-2">Amount</label>
+        <input type="text" name="Expenses[#].Amount" value="0" class="form-control Amounter" id="Amount^" onchange="Hoy(this.value,'Expenses^','Expense%')" />
+
+        <label class="control-label col-md-2">Total</label>
+        <input name="Expense[#].Total" class="form-control" id="ExpensePOW" value="0" disabled />
+        <input type ="hidden" name="Expenses[#].Total" class="form-control" id="ExpensesWOP" value="0"/>
+        
+        <br />
+       
+       
+
+        
+        @*<input type="hidden" name="BatchProducts.Index" value="%" />*@
+        <a class="deleteRow"></a>
+    </div>
+        
+   
+
+@*Div for Expense General*@
+
+<div class="form-group" id="NewBatchProduct2" style="display:none">
+
+    <label class="control-label col-md-2">Details</label>
+    <input type="text" name="Expenses[#].Description" class="form-control" />
+
+
+    <input type="hidden" name="Expenses[#].Amount" value="1" class="form-control Amounter" />
+
+    <label class="control-label col-md-2">Total</label>
+
+    <input type="text" name="Expenses[#].Total" class="form-control" id="ExpensesWOP" value="0" />
+
+    <br />
+
+
+
+
+    @*<input type="hidden" name="BatchProducts.Index" value="%" />*@
+    <a class="deleteRow"></a>
+
+</div>
+     
+   
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script>
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+
+    
+
+    </script>
+
+
+}
+
+<script>
+    var index = 0;
+
+    $("#addrow").click(function () {
+        //var index = (new Date()).getTime(); // unique indexer
+        var clone = $('#NewBatchProduct').clone(); // clone the BatchProducts item
+        // Update the index of the clone
+        clone.html($(clone).html().replace(/\[#\]/g, '[' + index + ']'));
+        clone.html($(clone).html().replace(/"%"/g, '"' + index + '"'));
+        clone.html($(clone).html().replace("^", index));
+        clone.html($(clone).html().replace('^', index));
+        clone.html($(clone).html().replace('POW', index));
+        clone.html($(clone).html().replace('WOP', index));
+        clone.html($(clone).html().replace('%', index));
+        $("#Inserter").append(clone.html());
+        index++;
+    });
+
+    $("#addrow2").click(function () {
+        //var index2 = (new Date()).getTime(); // unique indexer
+        var clone = $('#NewBatchProduct2').clone(); // clone the BatchProducts item
+        // Update the index of the clone
+        clone.html($(clone).html().replace(/\[#\]/g, '[' + index + ']'));
+        clone.html($(clone).html().replace(/"%"/g, '"' + index + '"'));
+        clone.html($(clone).html().replace("^", index));
+        clone.html($(clone).html().replace('^', index));
+        clone.html($(clone).html().replace('POW', index));
+        clone.html($(clone).html().replace('WOP', index));
+        clone.html($(clone).html().replace('%', index));
+        $("#Inserter2").append(clone.html());
+        index++;
+    });
+        
+
+    
+   
+</script>
+
+<script>
+    function Hoy(number, id, id2) {
+        
+        document.getElementById(id).value = number * document.getElementById("PerSack").value;
+        
+        document.getElementById(id2).value = number * document.getElementById("PerSack").value;
+        
+    }
+
+</script>
+
+
+    
+
+
+

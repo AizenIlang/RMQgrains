@@ -1,0 +1,42 @@
+﻿@model RMQGrainsBeta.Models.Transaction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CementID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CementID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TransactionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

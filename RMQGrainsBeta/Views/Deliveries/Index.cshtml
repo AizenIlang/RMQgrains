@@ -1,0 +1,87 @@
+﻿@model IEnumerable<RMQGrainsBeta.Models.Delivery>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Deliveries</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cement.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hauling)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HaulerCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlateNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantityToDeliver)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfArrival)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DRNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cement.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hauling)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HaulerCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlateNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantityToDeliver)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfArrival)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliveryTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DeliveryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DeliveryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DeliveryID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,349 @@
+﻿@model RMQGrainsBeta.Models.SummaryTransactionViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<div class="form-horizontal col-md-10">
+    <h2>Summary per Transaction</h2>
+    <hr />
+
+    
+    @using(Html.BeginForm("SummaryUpdate", "SummaryTransaction", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    <div class="form-group">
+        @Html.LabelFor(model => model.SONumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SONumber, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.SONumber, "", new { @class = "text-danger" })
+            <input type="hidden" name="SONumber" value="@Model.SONumber">
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.QuantityToDeliver, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.QuantityToDeliver, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.QuantityToDeliver, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CustomerName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CustomerName, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.CustomerName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.BankName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.BankName, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.BankName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Branch, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Branch, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.Branch, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DateOfCheque, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DateOfCheque, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.DateOfCheque, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Stats, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            
+            @Html.EnumDropDownListFor(model => model.Stats, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Stats, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Remarks, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.Remarks, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Remarks, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Expenses, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <a href="#ExpenseDetails" data-toggle="modal" class="btn btn-default"  id="ExpenseClickable">@ViewBag.TotalExpense <span class="glyphicon glyphicon-align-left"></span></a>
+
+        </div>
+    </div>
+        
+    <div class="modal fade" id="ExpenseDetails" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="model modal-header">
+                    <h2>Expense Summary</h2>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-condensed">
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Total</th>
+                        </tr>
+                        @foreach (var item in Model.Expenses)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Total)</td>
+                            </tr>
+                            
+                        }
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><strong>SO Expense : </strong>@ViewBag.TotalExpense</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><strong>SO Total Income : </strong>@ViewBag.IncomeAsWhole</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Income, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Income, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.Income, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CurrentStock, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CurrentStock, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.CurrentStock, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DateProcessed, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DateProcessed, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+            @Html.ValidationMessageFor(model => model.DateProcessed, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="label label-danger col-md-2">Processed By :</label>
+        <div class="col-md-10">
+
+            <input type="text" value="@User.Identity.Name" disabled class="form-control" width="10" />
+        </div>
+
+
+
+    </div>
+    <div class="form-group">
+        <label class="col col-md-2">Update Summary</label>
+        <div class="col col-md-10">
+            @{var Stats = Model.Stats.ToString();}
+            @if (Stats == "Closed" && User.IsInRole("Admin"))
+            {
+                <input type="submit" value="Update For Closed Admin" />
+            }
+            else if(Stats != "Closed")
+            {
+                <input type="submit" value="Update For Closed Admin" />
+            }
+            
+        </div>
+    </div>
+        
+    
+
+
+    
+
+
+
+    }@*End of Form*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="modal fade" id="CompleteDialog" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Completion</h4>
+            </div>
+            <div class="modal-body">
+
+                @Html.ActionLink("ForStorage", "ForStorage", "SummaryTransaction", new { SOnumberPass = @Model.SONumber, Operation = 0 }, new { htmlAttributes = new { @class = "btn btn-primary" } })
+                @Html.ActionLink("ForCompletion", "ForStorage", "SummaryTransaction", new { SOnumberPass = @Model.SONumber, Operation = 1 }, new { htmlAttributes = new { @class = "btn btn-primary" } })
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="form-horizontal col-md-2">
+    <br />
+    <br />
+    <br />
+
+    <a href="@Url.Action("RenewSO", "Cements", new {CementID = @ViewBag.CementID,CurrentStock=@Model.CurrentStock })" class="btn btn-success col col-md-12">Renew SO <span class="glyphicon glyphicon-transfer"></span></a>
+    @if (@Model.CurrentStock > 0)
+    {
+        <a href="@Url.Action("AddDelivery", "Deliveries", new {CementID = @ViewBag.CementID,TransactionID = @ViewBag.TransactionID  })" class=" btn btn-primary col-md-12">Add Delivery <span class="glyphicon glyphicon-plus"></span></a>
+    }
+
+
+    <a href="#CompleteDialog" data-toggle="modal" class="btn btn-danger col-md-12">Complete <span class="glyphicon glyphicon-save"></span></a>
+    @if (ViewBag.relations != 1)
+    {
+        <a href="#RelatedSO" data-toggle="modal" class="btn btn-warning col-md-12">Prev Transaction <span class="badge">@ViewBag.relations</span></a>
+    }
+</div>
+
+
+<div class="modal fade" id="RelatedSO" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Related SO</h2>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <th>SO Number</th>
+                        <th>Status</th>
+                        <th>Quantity</th>
+                        <th>Created Date</th>
+                    </tr>
+
+                    @foreach (var item in Model.RelatedCementList)
+                    {
+                        <tr>
+                            <td>@Html.ActionLink(item.SOnumber.ToString(), "PreviousSummary", "SummaryTransaction", new { SOnumberPass = item.SOnumber }, null)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Stats)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TotalQuantity)</td>
+                            <td>@Html.DisplayFor(modelItem => item.CurrentDate)</td>
+                            
+                           
+                        </tr>
+                    }
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<table class="table table-condensed">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.SONumber)</th>
+        <th>@Html.DisplayNameFor(model => model.QuantityToDeliver)</th>
+        <th>@Html.DisplayNameFor(model => model.CustomerName)</th>
+        <th>@Html.DisplayNameFor(model => model.BankName)</th>
+        <th>@Html.DisplayNameFor(model => model.Branch)</th>
+        <th>@Html.DisplayNameFor(model => model.ChequeNumber)</th>
+        <th>@Html.DisplayNameFor(model => model.DateOfCheque)</th>
+        <th>@Html.DisplayNameFor(model => model.Stats)</th>
+        <th>@Html.DisplayNameFor(model => model.Remarks)</th>
+        <th>@Html.DisplayNameFor(model => model.Expenses)</th>
+        <th>@Html.DisplayNameFor(model => model.Income)</th>
+        <th>@Html.DisplayNameFor(model => model.TotalIncome)</th>
+        <th>@Html.DisplayNameFor(model => model.CurrentStock)</th>
+        <th>@Html.DisplayNameFor(model => model.DateProcessed)</th>
+    </tr>
+
+    <tr>
+        <td>@Html.DisplayFor(model => model.SONumber)</td>
+        <td>@Html.DisplayFor(model => model.QuantityToDeliver)</td>
+        <td>@Html.DisplayFor(model => model.CustomerName)</td>
+        <td>@Html.DisplayFor(model => model.BankName)</td>
+        <td>@Html.DisplayFor(model => model.Branch)</td>
+        <td>@Html.DisplayFor(model => model.ChequeNumber)</td>
+        <td>@Html.DisplayFor(model => model.DateOfCheque)</td>
+        <td>@Html.DisplayFor(model => model.Stats)</td>
+        <td>@Html.DisplayFor(model => model.Remarks)</td>
+        <td>
+            <table class="table table-condensed">
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+
+
+
+                    <th>Total</th>
+                </tr>
+
+                @foreach (var item in Model.Expenses)
+                {
+
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+
+
+
+                        <td>@Html.DisplayFor(modelItem => item.Total)</td>
+                    </tr>
+                }
+                <tr>
+                    <th>Total Expense</th>
+                    <td></td>
+                    <th>@ViewBag.TotalExpense</th>
+                </tr>
+            </table>
+        </td>
+
+
+        <td>@Html.DisplayFor(model => model.Income)</td>
+        <td>@Html.DisplayFor(model => model.TotalIncome)</td>
+        <td>@Html.DisplayFor(model => model.CurrentStock)</td>
+        <td>@Html.DisplayFor(model => model.DateProcessed)</td>
+    </tr>
+
+</table>
+
+

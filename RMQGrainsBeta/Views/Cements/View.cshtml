@@ -1,0 +1,87 @@
+﻿@model IEnumerable<RMQGrainsBeta.Models.Cement>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SOnumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyingTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CementType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChequeNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageLocation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOnumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuyingTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CementType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChequeNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageLocation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CementID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CementID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CementID })
+        </td>
+    </tr>
+}
+
+</table>

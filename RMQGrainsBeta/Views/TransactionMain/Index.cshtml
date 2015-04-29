@@ -1,0 +1,38 @@
+﻿@model  IEnumerable<RMQGrainsBeta.Models.TransactionMainVM>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Transaction Main Index</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>SO Number</th>
+        <th>Qty Delivered</th>
+        <th>Deliver to</th>
+        <th>PHP/Sack</th>
+        <th>DR number</th>
+        <th>Expense</th>
+        <th>Income</th>
+        <th>Bank Name</th>
+        <th>Cheque Number</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.SONumber)</td>
+            <td>@Html.DisplayFor(modelItem => item.QuantityDelivered)</td>
+            <td>@Html.DisplayFor(modelItem => item.DeliveryTo)</td>
+            <td>@Html.DisplayFor(modelItem => item.PricePerSack)</td>
+            <td>@Html.DisplayFor(modelItem => item.DRNumber)</td>
+            <td>@Html.DisplayFor(modelItem => item.TotalExpenses)</td>
+            <td>@Html.DisplayFor(modelItem => item.Income)</td>
+            <td>@Html.DisplayFor(modelItem => item.BankName)</td>
+            <td>@Html.DisplayFor(modelItem => item.ChequeNumber)</td>
+        </tr>
+    }
+
+
+</table>

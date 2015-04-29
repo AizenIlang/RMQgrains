@@ -1,0 +1,88 @@
+﻿@model RMQGrainsBeta.Models.TransactionViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table table-bordered">
+    <tr>
+
+        <th>Delivery</th>
+        <th>BankName</th>
+        <th>SONumber</th>
+        <th>Expenses</th>
+
+
+    </tr>
+    @foreach (var item in Model.TransactionList)
+    {
+        <tr>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.DeliveryTo)
+
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BankName)
+
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SONumber)
+
+
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <th>
+                            Amount
+                        </th>
+                        <th>
+                            ExpenseID
+                        </th>
+                        <th>
+                            Total
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    @foreach (var item2 in item.ExpenseList)
+                    {
+
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Amount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.ExpenseID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Total)
+
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Description)
+
+
+                            </td>
+                        </tr>
+
+
+
+
+
+
+
+                    }
+                </table>
+            </td>
+
+        </tr>
+    }
+</table>
+
+

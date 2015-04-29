@@ -1,0 +1,74 @@
+﻿@model RMQGrainsBeta.Models.Payment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Payment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Delivery.HaulerCompany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delivery.HaulerCompany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Branch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TermsOfPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TermsOfPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofCheque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateofCheque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DRNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DRNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PaymentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

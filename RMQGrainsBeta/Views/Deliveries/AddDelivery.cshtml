@@ -1,0 +1,350 @@
+﻿@model RMQGrainsBeta.Models.DeliveryPaymentViewModel
+
+@{
+    ViewBag.Title = "Add Delivery";
+}
+
+<h2>Create</h2>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Delivery</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.Hauling, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.DeliveryModel.Hauling, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.Hauling, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.HaulerCompany, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeliveryModel.HaulerCompany, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.HaulerCompany, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.PlateNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeliveryModel.PlateNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.PlateNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.DriverName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeliveryModel.DriverName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.DriverName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.QuantityToDeliver, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeliveryModel.QuantityToDeliver, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.QuantityToDeliver, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.Destination, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.DeliveryModel.Destination, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.Destination, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.DestinationTo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeliveryModel.DestinationTo, new { htmlAttributes = new { @class = "form-control" } })
+
+
+                @Html.ValidationMessageFor(model => model.DeliveryModel.DestinationTo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.DateOfArrival, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeliveryModel.DateOfArrival, new { htmlAttributes = new { @class = "form-control datepicker" , @Value = DateTime.Now} })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.DateOfArrival, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.DeliveryTo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeliveryModel.DeliveryTo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.DeliveryTo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DeliveryModel.DRNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DeliveryModel.DRNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DeliveryModel.DRNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <input type="hidden" value="@ViewBag.CementID" name="CementID" />
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" id="CreateBTN" class="btn btn-default invisible" />
+            </div>
+        </div>
+    </div>
+
+    @*Start of Modal*@
+    <div class="modal fade" id="PaymentCreate" role="dialog">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="form-horizontal">
+                        <h4>Payment</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">Price Per Sack</label>
+                            <div class="col col-md-10">
+                                
+                                <input type="text" id="PerSack" value="0" class="form-control text-box" name="PaymentModel.PricePHP" />
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PaymentModel.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PaymentModel.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PaymentModel.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PaymentModel.BankName, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PaymentModel.BankName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PaymentModel.BankName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PaymentModel.Branch, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PaymentModel.Branch, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PaymentModel.Branch, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PaymentModel.TermsOfPayment, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EnumDropDownListFor(model => model.PaymentModel.TermsOfPayment, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.PaymentModel.TermsOfPayment, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PaymentModel.DateofCheque, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PaymentModel.DateofCheque, new { htmlAttributes = new { @class = "form-control datepicker", @Value = @DateTime.Now } })
+                                @Html.ValidationMessageFor(model => model.PaymentModel.DateofCheque, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PaymentModel.ChequeNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PaymentModel.ChequeNumber, new { htmlAttributes = new { @class = "form-control"} })
+                                @Html.ValidationMessageFor(model => model.PaymentModel.ChequeNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div id="Inserter">
+                            <h2>Expenses</h2>
+                        </div>
+                        <div id="Inserter2">
+                            <h2>General Expenses</h2>
+                        </div>
+
+                        <input type="button" id="addrow" value="Add" class="btn btn-primary" />
+                        <input type="button" id="addrow2" value="Add General" class="btn btn-primary" />
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Endof Modal*@
+    
+     <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a class="btn btn-default" href="#PaymentCreate" data-toggle="modal" id="AddPayment">Add Payment
+                <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </div>
+        </div>
+
+
+}
+
+
+
+<div class="form-group" id="NewBatchProduct" style="display:none">
+
+    <label class="control-label col-md-2">Details</label>
+    <input type="text" name="PaymentModel.Expenses[#].Description" class="form-control" />
+
+    <label class="control-label col-md-2">Amount</label>
+    <input type="text" name="PaymentModel.Expenses[#].Amount" value="0" class="form-control Amounter" id="Amount^" onchange="Hoy(this.value,'Expenses^','Expense%')" />
+
+    <label class="control-label col-md-2">Total</label>
+    <input name="PaymentModel.Expense[#].Total" class="form-control" id="ExpensePOW" value="0" disabled />
+    <input type="hidden" name="PaymentModel.Expenses[#].Total" class="form-control" id="ExpensesWOP" value="0" />
+
+    <br />
+
+
+
+
+    @*<input type="hidden" name="BatchProducts.Index" value="%" />*@
+    <a class="deleteRow"></a>
+</div>
+
+
+@*Div for Expense General*@
+
+<div class="form-group" id="NewBatchProduct2" style="display:none">
+
+    <label class="control-label col-md-2">Details</label>
+    <input type="text" name="PaymentModel.Expenses[#].Description" class="form-control" />
+
+    
+    <input type="hidden" name="PaymentModel.Expenses[#].Amount" value="1" class="form-control Amounter" />
+   
+    <label class="control-label col-md-2">Total</label>
+    
+    <input type="text" name="PaymentModel.Expenses[#].Total" class="form-control" id="ExpensesWOP" value="0" />
+
+    <br />
+
+
+
+
+    @*<input type="hidden" name="BatchProducts.Index" value="%" />*@
+    <a class="deleteRow"></a>
+
+</div>
+    
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+
+        $(function () {
+            $(".datepicker").datepicker();
+        });
+
+    </script>
+}
+
+
+<script>
+    var index = 0;
+    
+
+    $("#addrow").click(function () {
+        //var index = (new Date()).getTime(); // unique indexer
+        var clone = $('#NewBatchProduct').clone(); // clone the BatchProducts item
+        // Update the index of the clone
+        clone.html($(clone).html().replace(/\[#\]/g, '[' + index + ']'));
+        clone.html($(clone).html().replace(/"%"/g, '"' + index + '"'));
+        clone.html($(clone).html().replace("^", index));
+        clone.html($(clone).html().replace('^', index));
+        clone.html($(clone).html().replace('POW', index));
+        clone.html($(clone).html().replace('WOP', index));
+        clone.html($(clone).html().replace('%', index));
+        $("#Inserter").append(clone.html());
+       index++;
+    });
+
+    $("#addrow2").click(function () {
+        //var index2 = (new Date()).getTime(); // unique indexer
+        var clone = $('#NewBatchProduct2').clone(); // clone the BatchProducts item
+        // Update the index of the clone
+        clone.html($(clone).html().replace(/\[#\]/g, '[' + index + ']'));
+        clone.html($(clone).html().replace(/"%"/g, '"' + index + '"'));
+        clone.html($(clone).html().replace("^", index));
+        clone.html($(clone).html().replace('^', index));
+        clone.html($(clone).html().replace('POW', index));
+        clone.html($(clone).html().replace('WOP', index));
+        clone.html($(clone).html().replace('%', index));
+        $("#Inserter2").append(clone.html());
+        index++;
+    });
+
+
+
+
+
+
+</script>
+
+
+<script>
+    // Show Hide Add button
+    
+    $("#DeliveryModel_Destination").on('change', function () {
+       
+        if ($("#DeliveryModel_Destination").val() == 1) {
+            
+            $("#AddPayment").addClass("invisible");
+            $("#CreateBTN").removeClass("invisible");
+            $("#PaymentModel_BankName").val("");
+            $("#PaymentModel_Name").val("");
+        } else {
+            $("#AddPayment").removeClass("invisible");
+            $("#CreateBTN").addClass("invisible");
+        }
+
+    })
+</script>
+
+<script>
+    function Hoy(number, id, id2) {
+
+        document.getElementById(id).value = number * document.getElementById("DeliveryModel_QuantityToDeliver").value;
+
+        document.getElementById(id2).value = number * document.getElementById("DeliveryModel_QuantityToDeliver").value;
+
+    }
+
+</script>

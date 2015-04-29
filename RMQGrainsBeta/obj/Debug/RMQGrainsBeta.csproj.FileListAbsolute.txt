@@ -1,0 +1,114 @@
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\RMQGrainsBeta.dll.config
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\RMQGrainsBeta.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\RMQGrainsBeta.pdb
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Antlr3.Runtime.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\EntityFramework.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\EntityFramework.SqlServer.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.Google.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Web.Infrastructure.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Newtonsoft.Json.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Owin.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.Helpers.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.Mvc.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.Optimization.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.Razor.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.WebPages.Deployment.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.WebPages.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.WebPages.Razor.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\WebGrease.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.Helpers.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.Mvc.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.Optimization.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.Razor.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.WebPages.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.WebPages.Deployment.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\System.Web.WebPages.Razor.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Antlr3.Runtime.pdb
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Newtonsoft.Json.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\EntityFramework.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\EntityFramework.SqlServer.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.Google.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.csprojResolveAssemblyReference.cache
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.dll
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.pdb
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.Migrations.InitialCreate.resources
+c:\users\danze3\documents\visual studio 2013\Projects\RMQGrainsBeta\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.csproj.GenerateResource.Cache
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\RMQGrainsBeta.dll.config
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\RMQGrainsBeta.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\RMQGrainsBeta.pdb
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Antlr3.Runtime.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\EntityFramework.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\EntityFramework.SqlServer.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Newtonsoft.Json.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Owin.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.Helpers.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.Mvc.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.Optimization.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.Razor.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.WebPages.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.WebPages.Razor.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\WebGrease.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.Helpers.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.Mvc.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.Optimization.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.Razor.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.WebPages.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\System.Web.WebPages.Razor.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Antlr3.Runtime.pdb
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Newtonsoft.Json.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\EntityFramework.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\EntityFramework.SqlServer.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.csprojResolveAssemblyReference.cache
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.Migrations.InitialCreate.resources
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.csproj.GenerateResource.Cache
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.dll
+C:\Users\DanZe3\Documents\Visual Studio 2013\Projects\RMQGrainsBeta - Copy\RMQGrainsBeta\obj\Debug\RMQGrainsBeta.pdb

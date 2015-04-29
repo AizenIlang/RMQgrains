@@ -1,0 +1,43 @@
+﻿@model IEnumerable<RMQGrainsBeta.Models.ExpenseDetailedViewModel>
+@{
+    ViewBag.Title = "DetailedExpenses";
+}
+
+<h2>Detailed Expenses</h2>
+
+<table class="table tab-content">
+   
+  
+        <tr>
+            <th>@Html.DisplayNameFor(modelItem => modelItem.Description)</th>
+            <th>@Html.DisplayNameFor(modelItem => modelItem.Amount)</th>
+            <th>@Html.DisplayNameFor(modelItem => modelItem.QuantityTobeDelivered)</th>
+            <th>@Html.DisplayNameFor(modelItem => modelItem.Destination)</th>
+            <th>@Html.DisplayNameFor(modelItem => modelItem.DateOfExpenseCreated)</th>
+            <th>@Html.DisplayNameFor(modelItem => modelItem.Total)</th>
+        </tr>
+
+       @foreach (var item in Model)
+       {
+           <tr>
+               <td>@Html.DisplayFor(modelItem => item.Description)</td>
+               <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+               <td>@Html.DisplayFor(modelItem => item.QuantityTobeDelivered)</td>
+               <td>@Html.DisplayFor(modelItem => item.Destination)</td>
+               <td>@Html.DisplayFor(modelItem => item.DateOfExpenseCreated)</td>
+               <td>@Html.DisplayFor(modelItem => item.Total)</td>
+           </tr>
+       }
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><strong>Total : </strong>@ViewBag.TotalExpenses</td>
+    </tr>
+   
+    
+
+</table>
+
